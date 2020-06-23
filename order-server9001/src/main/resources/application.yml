@@ -1,0 +1,17 @@
+#启动端口
+server:
+  port: 9001
+#项目名称
+spring:
+  application:
+    name: order-provider
+#eureka配置
+eureka:
+  instance:
+    prefer-ip-address: true #使用服务的id地址注册
+    hostname: localhost
+  client:
+    service-url:
+      defaultZone: http://localhost:8001/eureka/
+    fetch-registry: true
+    register-with-eureka: true

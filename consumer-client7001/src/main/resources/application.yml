@@ -1,0 +1,15 @@
+#启动端口
+server:
+  port: 7001
+#项目名称
+spring:
+  application:
+    name: order-consumer
+#eureka配置
+eureka:
+  instance:
+    prefer-ip-address: true #使用服务的id地址注册
+    hostname: localhost
+  client:
+    service-url:
+      defaultZone: http://localhost:8001/eureka/
